@@ -6,13 +6,16 @@
         {
             // Create a doubly linked list:
             // 1 <-> 2 <-> 3 <-> 4
-            Node<int> head = new Node<int>(1);
-            head.Next = new Node<int>(2);
-            head.Next.Prev = head;
-            head.Next.Next = new Node<int>(3);
-            head.Next.Next.Prev = head.Next;
-            head.Next.Next.Next = new Node<int>(4);
-            head.Next.Next.Next.Prev = head.Next.Next;
+            
+            DoublyLinkedList<int> list = new DoublyLinkedList<int>();
+
+            list.AddFirst(1);
+            list.AddLast(2);
+            list.AddLast(3);
+            list.AddLast(4);
+
+            Node<int> head = list.Head;
+
             Console.WriteLine("Original Doubly Linked List");
             PrintList(head);
             head = Reverser<int>.Reverse(head);

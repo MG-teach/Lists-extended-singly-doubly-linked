@@ -30,7 +30,8 @@ namespace zad1
             }
             // The final node in the original list
             // becomes the new head after reversal
-            return prevNode.Prev;
+            head = prevNode.Prev;
+            return head;
         }
     }
 }

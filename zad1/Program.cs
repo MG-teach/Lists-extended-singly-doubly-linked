@@ -6,7 +6,7 @@
         {
             // Create a doubly linked list:
             // 1 <-> 2 <-> 3 <-> 4
-            
+
             DoublyLinkedList<int> list = new DoublyLinkedList<int>();
 
             list.AddFirst(1);
